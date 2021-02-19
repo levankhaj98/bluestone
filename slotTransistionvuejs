@@ -1,0 +1,10 @@
++ Slot: thanh phan con ben trong de tuy chon, dieu chinh
++ transistion: 
++ Event and state: 
+	+ Custom event:
+		+ la event tu dinh nghia
+		+ fire event: this.$emit("ten event", tham so)
+		+ this.$root => tham chieu den component root
++ state: 
+	+ kho lu tru chung
+	+ bien => tat ca cac component deu truy cap duoc
