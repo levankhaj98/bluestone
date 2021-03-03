@@ -4,7 +4,7 @@
 				<ul id="left-menu">
 					<li id="drop-down" @click="show=!show"><a href="#" @click="preventDefault">Dự án của BlueStone</a>
 						<transition-group name="fade">
-						<div v-if="show" :key="show" v-click-outside="closeEvent"><a href="#">Bếp núc là sẻ chia</a></div>
+						<div v-if="show" :key="show"><a href="#">Bếp núc là sẻ chia</a></div>
 						</transition-group>
 					</li>
 					<li class="border-expand"><a href="#">Tin tức</a></li>
@@ -33,16 +33,6 @@ export default {
 	methods:{
 		preventDefault: function(event){
 			event.preventDefault();
-		},
-		hide: function () { 
-			console.log('hide')
-			this.show = false
-		}
-	},
-	events: {
-		closeEvent: function () {
-			console.log('close event called')
-			this.hide()
 		}
 	},
 	watch: {
@@ -78,7 +68,7 @@ export default {
 	line-height: 24px;
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	max-width: 100%;
 	height: 50px;
 	font-size: 14px;
 	border-bottom: 1px solid #e0e9f1;
@@ -193,5 +183,9 @@ input:focus {
 }
 input.showIcon{
 	background-image: none;
+}
+/*=============responsive========*/
+@media screen and (max-width: 1080px){
+
 }
 </style>

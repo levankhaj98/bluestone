@@ -162,7 +162,7 @@ body{
 #recommend {
 	opacity: 0;
 	margin: 0 auto;
-	width: 1080px;
+	max-width: 1080px;
 	padding: 60px 0;
 	text-align: center;
 	position: relative;
@@ -181,7 +181,7 @@ body{
 #recommend > #wrap {
 	height: 120px;
 	position: relative;
-	width: 1080px;
+	max-width: 1080px;
 	margin: 40px auto;
 	overflow: hidden;
 }

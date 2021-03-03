@@ -1,4 +1,5 @@
 <template>
+<div id="gioithieu">
 	<div id="container">
 		<div class="product">
 			<a href="#"><img src="../assets/images/suggest2/noi-com-dien-tu.jpg"></a>
@@ -45,6 +46,7 @@
 			<a href="#" class="blue-button">tìm hiểu thêm</a>
 		</div>
 	</div>
+</div>
 </template>
 
 <script>
@@ -86,7 +88,7 @@ export default {
 	background-color: #d12046;
 }
 #container {
-	width: 1260px;
+	max-width: 1260px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -100,26 +102,27 @@ a {
 	display: inline-block;
 }
 #container > div > h3 {
-	margin-top: 30px;
+	margin-top: 30px;	
 	text-transform: uppercase;
-  font-size: 16px;
-  font-family: GothicA1-bold;
-  line-height: 24px;
-  color: #d12046;
-  text-transform: uppercase;
-  margin-bottom: 5px;
+	font-size: 16px;
+	font-family: GothicA1-bold;
+	line-height: 24px;
+	color: #d12046;
+	text-transform: uppercase;
+	margin-bottom: 5px;
 }
 #container > div {
 	margin-bottom: 70px;
 }
 #container > div > h3 > a {
 	text-transform: uppercase;
-  font-size: 16px;
-  font-family: GothicA1-bold;
-  line-height: 24px;
-  color: #024f9b;
-  text-transform: uppercase;
-  margin-bottom: 5px;
+	font-size: 16px;
+	font-family: GothicA1-bold;
+	line-height: 24px;
+	color: #024f9b;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	flex-shrink: 2;
 }
 .introduce {
 	width: 830px;
@@ -127,32 +130,32 @@ a {
 }
 .introduce > div > h3 {
 	font-size: 16px;
-  font-family: GothicA1-bold;
-  line-height: 24px;
-  color: #d12046;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  width: 665px;
+	font-family: GothicA1-bold;
+	line-height: 24px;
+	color: #d12046;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	width: 665px;
 }
 .introduce > h2 {
 	margin: 10px 0;
-  font-size: 36px;
-  font-family: Prata;
-  font-weight: 100;
-  line-height: 48px;
-  color: #024f9b;
-  text-transform: none;
-  width: 665px;
+	font-size: 36px;
+	font-family: Prata;
+	font-weight: 100;
+	line-height: 48px;
+	color: #024f9b;
+	text-transform: none;
+	width: 665px;
 }
 .introduce > p {
 	width: 665px;
 }
 .introduce {
 	margin: 0 0 10px;
-  color: #333;
-  background: #fff;
-  font-size: 16px;
-  line-height: 24px;
+	color: #333;
+	background: #fff;
+	font-size: 16px;
+	line-height: 24px;
 }
 .product {
 	width: 400px;

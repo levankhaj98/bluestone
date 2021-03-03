@@ -74,7 +74,7 @@ export default {
 	position: absolute;
 	top: 37%;
 	left: 52%;
-	width: 560px;
+	max-width: 560px;
 	margin: 0px auto;
 }
 .appear {
@@ -106,12 +106,12 @@ export default {
 	position: absolute;
 	top: 180%;
 	left: -15%;
-	width: 520px;
+	max-width: 520px;
 	display: flex;
 	margin-right: 60px;
 }
 #blender > a {
-	width: 260px;
+	max-width: 260px;
 	text-align: center;
 }
 #blender > a > img {

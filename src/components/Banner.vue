@@ -8,7 +8,7 @@
 	</button>
 		<div id="container">
 			<transition-group name="fade">
-				<div id="wrap" :key="show">
+				<div id="wrap" :key="show" :style="{height: (screenWidth / 2.35787) + 'px'}">
 					
 						<div class="banner" :class="{showSlide:showSlide == 1}">
 							<img src="../assets/images/banner/banner1.png">
@@ -57,7 +57,8 @@ data() {
 			showSlide: 1,
 			moveUp: false,
 			move: false,
-			autoSlide: true
+			autoSlide: true,
+			screenWidth: null
 	}
 },
 	methods: {
@@ -96,7 +97,8 @@ data() {
 	},
 	mounted(){
 		this.moveUp = true;
-
+		setInterval(() => {this.screenWidth = (window.screen.width)}, 10 )
+		
 		setInterval(() => {
 				if (this.autoSlide == true) {
 					if (this.showSlide < 4) {
@@ -110,6 +112,13 @@ data() {
 					setTimeout(() => {this.autoSlide = true}, 100);
 				}
 			}, 4000)
+	},
+	watch: {
+		screenWidth: {
+			handler() {
+				this.screenWidth = screen.width
+			}
+		}
 	},
 }
 </script>
@@ -144,14 +153,12 @@ data() {
 #wrap {
 	display: inline-block;
 	clear: both;
-	height: 518px;
 }
 #container {
 	overflow: hidden;
 }
 .banner {
 	width: 100%;
-	height: 100%;
 	display: inline-block;
 	background-color: #EFEEEE;
 	flex-shrink: 0;
@@ -161,6 +168,7 @@ data() {
 }
 .banner img {
 	width: 100%;
+	height: 100%;
 	display: block;
 }
 .banner > .moveUpLink > a{

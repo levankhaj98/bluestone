@@ -52,7 +52,7 @@ export default {
 <style lang="css" scoped>
 
 #reason {
-	width: 100%;
+	max-width: 100%;
 	height: 600px;
 	overflow: hidden;
 	position: relative;
@@ -74,7 +74,7 @@ export default {
 }
 #reason > p {
 	margin-top: 20px;
-	width: 690px;
+	max-width: 690px;
 	color: white;
 }
 #reason > img {

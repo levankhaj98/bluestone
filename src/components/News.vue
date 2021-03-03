@@ -1,40 +1,42 @@
 <template>
-	<div id="news">
-		<div id="left-news">
-			<h2>cập nhật mới nhất</h2>
-			<div class="item">
-				<a href="#"><img src="../assets/images/new-update/tet-se-chia.jpg"></a>
-				<div>
-					<h3><a href="#">TẾT SẺ CHIA&colon; BLUESTONE CHUNG TAY CÙNG ĐIỆN MÁY XANH MANG “TẾT ẤM” ĐẾN VỚI NGƯỜI NGHÈO</a></h3>
-					<a href="#">tin tức mới</a>
+	<div id="news-and-video">
+		<div id="news">
+			<div id="left-news">
+				<h2>cập nhật mới nhất</h2>
+				<div class="item">
+					<a href="#"><img src="../assets/images/new-update/tet-se-chia.jpg"></a>
+					<div>
+						<h3><a href="#">TẾT SẺ CHIA&colon; BLUESTONE CHUNG TAY CÙNG ĐIỆN MÁY XANH MANG “TẾT ẤM” ĐẾN VỚI NGƯỜI NGHÈO</a></h3>
+						<a href="#">tin tức mới</a>
+					</div>
+				</div>
+				<div class="item">
+					<a href="#"><img src="../assets/images/new-update/trao-hoc-bong.jpg"></a>
+					<div>
+						<h3><a href="#">Tưng bừng lễ trao tặng sách, thiết bị học tập và học bổng cho Trường THCS xã Nghĩa Lộc, huyện Nghĩa Đàn, Nghệ An</a></h3>
+						<a href="#">tin tức mới</a>
+					</div>
+				</div>
+				<div class="item">
+					<a href="#"><img src="../assets/images/new-update/da-bong.jpg"></a>
+					<div>
+						<h3><a href="#">BlueStone kết hợp cùng Vtars tổ chức trận đấu giao hữu gây quỹ ủng hộ miền Trung</a></h3>
+						<a href="#">tin tức mới</a>
+					</div>
 				</div>
 			</div>
-			<div class="item">
-				<a href="#"><img src="../assets/images/new-update/trao-hoc-bong.jpg"></a>
-				<div>
-					<h3><a href="#">Tưng bừng lễ trao tặng sách, thiết bị học tập và học bổng cho Trường THCS xã Nghĩa Lộc, huyện Nghĩa Đàn, Nghệ An</a></h3>
-					<a href="#">tin tức mới</a>
+			<div id="video-demo">
+				<h2>video mới nhất</h2>
+				<div @click="hiddenVideo = !hiddenVideo">
+					<i class="fas fa-play-circle"></i>
+					<img src="../assets/images/banner/banner1.png">
+					<div id="hidden-video" :class="{hiddenVideo: hiddenVideo}" ref="autoPlay">
+						<iframe v-if="hiddenVideo == false" src="https://www.youtube.com/embed/CJphwpG0PGo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" autoplay="autoplay" allowfullscreen></iframe>
+						<p @click="hiddenVideo = false"><i class="fas fa-times"></i></p>
+					</div>
 				</div>
+				<h3>SẺ CHIA SỨC KHỎE MÙA HÈ CÙNG BLUESTONE</h3>
 			</div>
-			<div class="item">
-				<a href="#"><img src="../assets/images/new-update/da-bong.jpg"></a>
-				<div>
-					<h3><a href="#">BlueStone kết hợp cùng Vtars tổ chức trận đấu giao hữu gây quỹ ủng hộ miền Trung</a></h3>
-					<a href="#">tin tức mới</a>
-				</div>
-			</div>
-		</div>
-		<div id="video-demo">
-			<h2>video mới nhất</h2>
-			<div @click="hiddenVideo = !hiddenVideo">
-				<i class="fas fa-play-circle"></i>
-				<img src="../assets/images/banner/banner1.png">
-				<div id="hidden-video" :class="{hiddenVideo: hiddenVideo}" ref="autoPlay">
-					<iframe v-if="hiddenVideo == false" src="https://www.youtube.com/embed/CJphwpG0PGo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" autoplay="autoplay" allowfullscreen></iframe>
-					<p @click="hiddenVideo = false"><i class="fas fa-times"></i></p>
-				</div>
-			</div>
-			<h3>SẺ CHIA SỨC KHỎE MÙA HÈ CÙNG BLUESTONE</h3>
 		</div>
 	</div>
 </template>
@@ -55,8 +57,9 @@ export default {
 <style lang="css" scoped>
 #news {
 	padding: 60px 0px;
-	width: 1260px;
+	max-width: 1260px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0px auto;
 }

@@ -133,8 +133,8 @@ export default {
 }
 .stickyMenu{
 	position:sticky !important; 
-	top:0px; 
-	left:0px; 
+	top: 0px; 
+	left: 0px; 
 	background: white !important; 
 	box-shadow: 0px 2px 15px 0px #d0d0d0;
 }
@@ -142,22 +142,22 @@ export default {
 	padding: 0 18px;
 }
 #relative > #wrap > #menu > li > a > img {
-	width: 100%;
-	transition: width 0.3s ease-in-out;
+	max-width: 100%;
+	transition: max-width 0.3s ease-in-out;
 }
 .stickyMenu > #relative > #wrap > #menu > li > a > img {
-	width: 80%;
+	max-width: 80%;
 }
 #sticky-menu {
 	position: relative;
-	width: 100%;
+	max-width: 100%;
 	height: 58px;
 	background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0.4) 70%, rgba(255,255,255,0.03) 98%, rgba(255,255,255,0) 100%);;
 	transition: background 0.3s ease-in-out;
 }
 #wrap {
 	display: block;
-	width: 1140px;
+	max-width: 1140px;
 	height: 58px;
 	margin-right: auto;
 	margin-left: auto;
@@ -220,7 +220,7 @@ export default {
 	position: absolute;
 	top: 50px;
 	left: 0;
-	width: 100%;
+	max-width: 100%;
 	height: 900px;
 	background-color: white;
 }
@@ -263,7 +263,7 @@ export default {
 #hidden-products .inside-hidden-products > li > a > div {
 	margin-bottom: 20px;
 	height: 80px;
-	width: 100%;
+	max-width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
